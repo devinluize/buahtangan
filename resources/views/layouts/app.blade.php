@@ -9,10 +9,10 @@
 </head>
 <body class="flex flex-row">
     @section('sidebar')
-    <nav class="flex flex-col bg-lightGreen w-[23rem] h-screen">
-        <img src={{asset('images/BuahTanganSymbolNav.png')}} class="w-[20rem] object-contain mb-12">
+    <nav class="flex flex-col bg-lightGreen w-[23rem] h-[84rem]">
+        <img src={{asset('images/BuahTanganSymbolNav.png')}} class="w-[20rem] mt-[3rem] mx-auto object-contain mb-[9rem]">
         <div class="flex flex-col w-[20rem] text-[20px] ml-[4rem]">
-            <ul class="flex flex-col justify-between h-[30rem]">
+            <ul class="flex flex-col gap-[4rem] h-[30rem]">
                 <li class="@if(request()->is('/')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer  p-2 ">
                     <img src={{asset('images/iconHome.png')}} class="w-[2rem] mr-4 ml-8">
                     <a href="/">Home</a>

@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="mt-[5rem]">
         <div class="flex  flex-row">
             <div class="flex flex-col">
                 <h1 class="font-semibold text-[34px]">Recommended Courses</h1>
