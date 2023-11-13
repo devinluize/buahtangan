@@ -37,7 +37,7 @@
                     <p class="text-white font-medium text-[28px] ml-[7rem] z-2">1 / 9 Steps</p>
                 </div>
             </div>     
-            <p class="font-semibold text-normalGreen text-[24px] text-center mt-3">Continue Now</p>
+            <p class="font-semibold text-normalGreen text-[24px] text-center mt-3"><a class="cursor-pointer">Continue Now</a></p>
         </div>
         @endfor
 
@@ -65,7 +65,7 @@
                         <p class="text-white">Soil and plant basics</p>
                     </div>
                 </div>     
-                <p class="font-semibold text-normalGreen text-[24px] text-center mt-[4.75rem]">Start Now</p>
+                <p class="font-semibold text-normalGreen text-[24px] text-center mt-[4.75rem]"><a class="cursor-pointer">Start Now</a></p>
             </div>
 
             <div class="">
@@ -78,7 +78,7 @@
                         <p class="text-white">Soil and plant basics</p>
                     </div>
                 </div>     
-                <p class="font-semibold text-normalGreen text-[24px] text-center mt-[4.75rem]">Start Now</p>
+                <p class="font-semibold text-normalGreen text-[24px] text-center mt-[4.75rem]"><a class="cursor-pointer">Start Now</a></p>
             </div>
 
             <div class="">
@@ -91,7 +91,7 @@
                         <p class="text-white">Soil and plant basics</p>
                     </div>
                 </div>     
-                <p class="font-semibold text-normalGreen text-[24px] text-center mt-[4.75rem]">Start Now</p>
+                <p class="font-semibold text-normalGreen text-[24px] text-center mt-[4.75rem]"><a class="cursor-pointer">Start Now</a></p>
             </div>
     </div>
 
