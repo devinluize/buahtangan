@@ -16,4 +16,8 @@ Tools yang dipakai :
 
 -   Login (done)
 -   Register (done)
--   Home (WIP by Krisna)
+-   Home (UI done, belum bisa di klik coursenya)
+-   Profile(done)
+-   Edit Profile(done)
+-   My Plants(UI done, belum bisa melihat detail)
+-   add my plant(done)
