@@ -14,7 +14,7 @@
             <p class="text-[24px] font-semibold">Effel Zeffanya</p>
             <p class="text-[24px] font-semibold text-gray-400">16 plants harvested</p>
         </div>
-        <button class="ml-[30rem] w-[16rem] h-[3rem] my-auto rounded-[40px] text-white font-semibold text-[18px] p-2 bg-gray-400">Edit Profile</button>
+        <a href="/edit-profile" class="ml-[30rem] w-[16rem] h-[3rem] my-auto rounded-[40px] text-center cursor-pointer text-white font-semibold text-[18px] p-2 bg-gray-400">Edit Profile</a>
     </div>
 
     <div class="mt-[6.5rem]">

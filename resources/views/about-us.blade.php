@@ -18,7 +18,7 @@
                 Hobi berkebun atau baru mau memulai berkebun, tetapi bingung hal apa saja yang diperlukan untuk memulai harvesting? Dengan uluran tangan dari buahtangan maka anda tidak perlu bingung untuk memulai perjalanan berkebun anda.   
             </p>
             <button class="mt-[4rem]  flex flex-row w-[26.5rem] h-[4rem] bg-normalGreen rounded-md">
-                <a class="my-auto ml-auto text-white font-semibold text-[28px]">Mulai Menanam</a>
+                <a  href="/explore" class="my-auto ml-auto text-white font-semibold text-[28px]">Mulai Menanam</a>
                 <img src="{{asset('images/arrowButton.png')}}" alt="arrow" class="my-auto object-contain w-[2.5rem] ml-[1rem] mr-auto">
             </button>
         </div>

@@ -37,10 +37,10 @@
                     @endif
                 </li>
 
-                <li class="@if(request()->is('my-plants')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
+                <li class="@if(request()->is('my-plants') || request()->is('my-plants-add-album')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
                     <img src={{asset('images/iconMyPlants.png')}} class="w-[2rem] mr-4 ml-8">
                     <a href="/my-plants">My Plants</a>
-                    @if(request()->is('my-plants'))
+                    @if(request()->is('my-plants') || request()->is('my-plants-add-album'))
                     <div class="absolute bg-lightGreen w-4 h-4 rounded-full ml-[17.5rem]"></div>
                     @endif
                 </li>
@@ -53,10 +53,10 @@
                     @endif
                 </li>
 
-                <li class="@if(request()->is('profile')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
+                <li class="@if(request()->is('profile') || request()->is('edit-profile')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
                     <img src={{asset('images/iconProfile.png')}} class="w-[2rem] mr-4 ml-8">
                     <a href="/profile">Profile</a>
-                    @if(request()->is('profile'))
+                    @if(request()->is('profile') || request()->is('edit-profile'))
                     <div class="absolute bg-lightGreen w-4 h-4 rounded-full ml-[17.5rem]"></div>
                     @endif
                 </li>
@@ -72,7 +72,7 @@
         </nav>
         @show
 
-        <div>
+        <div class="w-full">
             @yield('content')
         </div>
 </body>
