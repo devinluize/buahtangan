@@ -32,6 +32,9 @@ Route::get('/explore', function () {
 Route::get('/my-plants', function(){
     return view('my-plants');
 });
+Route::get('/my-plants-add-album', function () {
+    return view('add-plant-album');
+});
 
 //My Courses
 Route::get('/my-course', function(){
@@ -41,6 +44,9 @@ Route::get('/my-course', function(){
 //Profile
 Route::get('/profile', function(){
     return view('profile');
+});
+Route::get('/edit-profile', function () {
+    return view('edit-profile');
 });
 
 //About Us

@@ -9,11 +9,12 @@ export default {
         extend: {
             colors: {
                 lightGreen: "#BFFFBA",
-                nomralGreen: "#2FB866",
+                normalGreen: "#2FB866",
                 blackGreen: "#161E14",
             },
             fontFamily: {
                 poppins: ["Poppins", "sans"],
+                beVietnam: ["Be Vietnam Pro", "sans-serif"],
             },
         },
     },
