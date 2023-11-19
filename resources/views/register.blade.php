@@ -13,9 +13,10 @@
         <img src="{{asset('images/AuthBackground.png')}}" class="absolute w-screen h-screen z-0">
 
         {{-- Authentication Form --}}
-        <form class="w-[40rem] h-screen p-12 bg-white z-10 absolute right-0">
-            <img src={{{ asset('/images/BuahTanganSymbol.png') }}} class="w-[60rem] object-fill mb-12">
+        <form  method="GET" class="w-[40rem] h-screen p-12 bg-white z-10 absolute right-0" action="{{ route('register.action') }}">
             @csrf
+            <img src={{{ asset('/images/BuahTanganSymbol.png') }}} class="w-[60rem] object-fill mb-12">
+
             <h2 class="text-[34px] mb-6 font-semibold text-blackGreen">Register</h2>
             <div class="flex flex-col font-poppins font-medium">
                 <label class="text-[18px] text-blackGreen">Username</label>
@@ -26,8 +27,8 @@
 
                 <label class="text-[18px] text-blackGreen">Password</label>
                 <input type="password" name="password" class="bg-lightGreen shadow-md mb-6 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
-                
-                <label class="text-[18px] text-blackGreen">Email</label>
+
+                <label class="text-[18px] text-blackGreen">Password Confirmation</label>
                 <input type="password" name="password_confirmation" class="bg-lightGreen shadow-md mb-12 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
 
             </div>
