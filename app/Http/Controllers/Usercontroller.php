@@ -15,11 +15,17 @@ class Usercontroller extends Controller
             'password' => 'required',
             'password_confirm' => 'required|same:password',
         ]);
+        // dd("dasdasdas");
         $user_data = new User();
-        $user_data->name=$request->username;
+        $user_data->username=$request->username;
         $user_data->email=$request->email;
         $user_data->password=$request->password;
         $user_data->save();
-        return redirect()->route('login');
+        dump($user_data);
+
+        return view('register');
     }
+    // public function register_action(){
+    //     return view('register');
+    // }
 }
