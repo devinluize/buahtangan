@@ -21,3 +21,5 @@ Tools yang dipakai :
 -   Edit Profile(done)
 -   My Plants(UI done, belum bisa melihat detail)
 -   add my plant(done)
+## Back-end Progress
+-Register(done)
