@@ -7,9 +7,9 @@
 @section('content')
 
 
-<div class="flex ml-[5rem] mt-[6rem] flex-col">
+<div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col">
     
-    <h1 class="font-bold text-[64px] mx-auto">My Plant Album</h1>
+    <h1 class="font-bold text-[64px] mx-auto">My Plants</h1>
 
     {{-- Placeholder untuk koleksi tanaman user --}}
     <div class="grid grid-cols-3 gap-[3rem] mt-20 ">

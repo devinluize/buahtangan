@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="flex ml-[5rem] mt-[6rem] flex-col">
+<div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col">
     <h1 class="text-center mx-auto font-bold text-[56px] mb-16">Add Plant Album</h1>
 
     <div class="mx-auto border-[3px] p-12  mb-16">
@@ -49,7 +49,7 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="text-center mx-auto mb-16 w-[32rem] h-[8rem] bg-normalGreen rounded-3xl font-semibold text-[24px]">Create Album</button>
+            <button type="submit" class="text-white text-center mx-auto mb-16 w-[32rem] h-[8rem] bg-normalGreen rounded-3xl font-semibold text-[24px]">Create Album</button>
         </form>
     </div>
 </div>

@@ -29,10 +29,10 @@
                    @endif
                 </li>
                 
-                <li class="@if(request()->is('explore')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
+                <li class="@if(request()->is('explore') || request()->is('course-detail') || request()->is('course-detail/preparing-soil') || request()->is('course-detail/picture-plant')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
                     <img src={{asset('images/iconExplore.png')}} class="w-[2rem] mr-4 ml-8">
                     <a href="/explore">Explore</a>
-                    @if(request()->is('explore'))
+                    @if(request()->is('explore') || request()->is('course-detail') || request()->is('course-detail/preparing-soil') || request()->is('course-detail/picture-plant'))
                     <div class="absolute bg-lightGreen w-4 h-4 rounded-full ml-[17.5rem]"></div>
                     @endif
                 </li>

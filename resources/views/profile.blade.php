@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="flex ml-[5rem] mt-[6rem] flex-col just">
+<div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col just">
     <div class="flex flex-row">
         <img src="{{asset('images/effel.png')}}" alt="profile picture"  class="border border-black rounded-full w-[15rem] h-[15rem]">
         <img src="{{asset('images/camera.png')}}" alt="camera" class="absolute w-12 h-12 ml-[11rem] mt-[12rem]">
