@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="flex ml-[5rem] mt-[6rem] flex-col">
+<div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col">
     <h1 class="text-[34px] font-semibold">About Us</h1>
 
     <div class="mt-[6rem] flex flex-row">

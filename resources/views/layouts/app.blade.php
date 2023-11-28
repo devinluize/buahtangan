@@ -29,18 +29,18 @@
                    @endif
                 </li>
                 
-                <li class="@if(request()->is('explore')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
+                <li class="@if(request()->is('explore') || request()->is('course-detail') || request()->is('course-detail/preparing-soil') || request()->is('course-detail/picture-plant')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
                     <img src={{asset('images/iconExplore.png')}} class="w-[2rem] mr-4 ml-8">
                     <a href="/explore">Explore</a>
-                    @if(request()->is('explore'))
+                    @if(request()->is('explore') || request()->is('course-detail') || request()->is('course-detail/preparing-soil') || request()->is('course-detail/picture-plant'))
                     <div class="absolute bg-lightGreen w-4 h-4 rounded-full ml-[17.5rem]"></div>
                     @endif
                 </li>
 
-                <li class="@if(request()->is('my-plants') || request()->is('my-plants-add-album')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
+                <li class="@if(request()->is('my-plants') || request()->is('my-plants-add-album') || request()->is('my-plants/plant-detail') || request()->is('my-plants/plant-detail/view-album')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
                     <img src={{asset('images/iconMyPlants.png')}} class="w-[2rem] mr-4 ml-8">
                     <a href="/my-plants">My Plants</a>
-                    @if(request()->is('my-plants') || request()->is('my-plants-add-album'))
+                    @if(request()->is('my-plants') || request()->is('my-plants-add-album') || request()->is('my-plants/plant-detail') || request()->is('my-plants/plant-detail/view-album'))
                     <div class="absolute bg-lightGreen w-4 h-4 rounded-full ml-[17.5rem]"></div>
                     @endif
                 </li>

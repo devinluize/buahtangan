@@ -37,11 +37,30 @@ Route::get('/my-plants-add-album', function () {
     return view('add-plant-album');
 });
 
-//My Courses
+Route::get('/my-plants/plant-detail',function () {
+    return view('plant-detail');
+});
+
+Route::get('/my-plants/plant-detail/view-album', function () {
+    return view('view-album');
+});
+
+//Courses
 Route::get('/my-course', function(){
     return view('my-course');
 });
 
+Route::get('/course-detail', function(){
+    return view('course-detail');
+});
+
+Route::get('/course-detail/preparing-soil',function(){
+    return view('preparing-soil');
+});
+
+Route::get('/course-detail/picture-plant',function(){
+    return view('picture-plant');
+});
 //Profile
 Route::get('/profile', function(){
     return view('profile');

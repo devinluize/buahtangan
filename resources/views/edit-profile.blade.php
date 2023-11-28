@@ -5,7 +5,7 @@
 @section('sidebar')
 
 @section('content')
-<div class="flex ml-[5rem] mt-[6rem] flex-col">
+<div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col">
     <form class="flex flex-col">
         @csrf
         <div class="flex flex-row justify-between mb-[3.5rem]">

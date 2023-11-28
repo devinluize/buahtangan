@@ -7,14 +7,14 @@
 @section('content')
 
 
-<div class="flex ml-[5rem] mt-[6rem] flex-col">
+<div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col">
     
-    <h1 class="font-bold text-[64px] mx-auto">My Plant Album</h1>
+    <h1 class="font-bold text-[64px] mx-auto">My Plants</h1>
 
     {{-- Placeholder untuk koleksi tanaman user --}}
     <div class="grid grid-cols-3 gap-[3rem] mt-20 ">
         @for ($i = 0 ; $i < 5 ; $i++)
-        <div class="flex flex-col gap-4 w-[26rem] border border-normalGreen shadow-card rounded-[40px] mb-[3rem]">
+        <a href="/my-plants/plant-detail" class="flex flex-col gap-4 w-[26rem] border border-normalGreen shadow-card rounded-[40px] mb-[3rem]">
             <h2 class="font-semibold text-[32px] text-center bg-normalGreen rounded-tl-[40px] rounded-tr-[40px]">Spinach</h2>
             <div class="flex flex-col gap-3 p-1 mb-[1.25rem]">
                 <img src="{{'images/bayam.png'}}" alt="tanaman" class="w-[22rem] h-[22rem] mx-auto ">
@@ -25,7 +25,7 @@
                     <p>Now</p>
                 </div>
             </div> 
-        </div>
+        </a>
         @endfor
 
         <div class="border-[2px] border-dashed rounded-[1.25rem] w-[26rem] h-[33rem] border-gray-600 p-2 flex flex-col">
