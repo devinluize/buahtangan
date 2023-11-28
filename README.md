@@ -16,10 +16,15 @@ Tools yang dipakai :
 
 -   Login (done)
 -   Register (done)
--   Home (UI done, belum bisa di klik coursenya)
+-   Home (UI done, belum bisa di klik coursenya) comment : Gw bingung ini kalau mencet course kemana
 -   Profile(done)
 -   Edit Profile(done)
--   My Plants(UI done, belum bisa melihat detail)
+-   My Plants(done)
 -   add my plant(done)
+-   Shcedule(TBD)
+-   Explroe(TBD)
+-   My Course(TBD)
+
 ## Back-end Progress
+
 -Register(done)

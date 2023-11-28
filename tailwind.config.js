@@ -11,6 +11,9 @@ export default {
                 lightGreen: "#BFFFBA",
                 normalGreen: "#2FB866",
                 blackGreen: "#161E14",
+                lightBrown: "#D8BE9F",
+                lightBlue: "#A4B9EE",
+                lightGrey: "#D1D1D1",
             },
             fontFamily: {
                 poppins: ["Poppins", "sans"],

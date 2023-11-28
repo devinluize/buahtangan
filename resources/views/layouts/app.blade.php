@@ -37,10 +37,10 @@
                     @endif
                 </li>
 
-                <li class="@if(request()->is('my-plants') || request()->is('my-plants-add-album')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
+                <li class="@if(request()->is('my-plants') || request()->is('my-plants-add-album') || request()->is('my-plants/plant-detail') || request()->is('my-plants/plant-detail/view-album')) bg-white rounded-l-full @endif flex flex-row items-center cursor-pointer p-2">
                     <img src={{asset('images/iconMyPlants.png')}} class="w-[2rem] mr-4 ml-8">
                     <a href="/my-plants">My Plants</a>
-                    @if(request()->is('my-plants') || request()->is('my-plants-add-album'))
+                    @if(request()->is('my-plants') || request()->is('my-plants-add-album') || request()->is('my-plants/plant-detail') || request()->is('my-plants/plant-detail/view-album'))
                     <div class="absolute bg-lightGreen w-4 h-4 rounded-full ml-[17.5rem]"></div>
                     @endif
                 </li>
