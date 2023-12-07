@@ -7,7 +7,7 @@
 @section('content')
 
 <p>
-<div class="flex ml-[6rem] mt-[6rem] flex-col">
+<div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col">
     <div class="flex  flex-row">
         <div class="flex flex-col">
             <h1 class="font-semibold text-[34px] mb-4 ml-3">Search Course</h1>
@@ -260,21 +260,22 @@
             </div>
         </div>
     </div>
+    <div class="flex items-right justify-end pt-5">
+        <div class="flex items-center mr-2">
+            <button class="w-20 h-12 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-800">
+                <img src="{{asset('images/Arrow 2.png')}}" alt="Left Arrow" class="w-15 h-4" />
+            </button>
+        </div>
+        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
+            <span class="text-white font-beVietnam text-3xl">1</span>
+        </div>
+        <div class="flex items-center ml-2">
+            <button class="w-20 h-12 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-800">
+                <img src="{{asset('images/Arrow 2.png')}}" alt="Right Arrow" class="w-15 h-4 rotate-180" />
+            </button>
+        </div>
+    </div>
 </div>
-<div class="flex items-right justify-end pt-5">
-    <div class="flex items-center mr-2">
-        <button class="w-20 h-12 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-800">
-            <img src="{{asset('images/Arrow 2.png')}}" alt="Left Arrow" class="w-15 h-4" />
-        </button>
-    </div>
-    <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-        <span class="text-white font-beVietnam text-3xl">1</span>
-    </div>
-    <div class="flex items-center ml-2">
-        <button class="w-20 h-12 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-800">
-            <img src="{{asset('images/Arrow 2.png')}}" alt="Right Arrow" class="w-15 h-4 rotate-180" />
-        </button>
-    </div>
-</div>
+
 </p>
 @endsection
