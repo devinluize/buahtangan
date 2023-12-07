@@ -82,7 +82,10 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 })->name('register');
-Route::get('/action_re',[Usercontroller::class,'register_action'])->name('register.action');
+
+Route::post('/action_re',[Usercontroller::class,'register_action'])->name('register.action');
+Route::post('/login',[Usercontroller::class,'login'])->name('login.action');
+
 // Route::get('/asdads', function () {
 //     return view('register');
 // })->name('register');
