@@ -48,9 +48,6 @@ class Usercontroller extends Controller
 // dd($credentials);
         return view('register');
     }
-    public function authlogin(){
-        
-    }
     // public function register_action(){
     //     return view('register');
     // }
