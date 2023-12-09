@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plant extends Model
 {
+    protected $table='plants';
+    protected $primaryKey='user_id';
+    protected $fillable = [
+        'path', // Add 'path' here if it's missing
+        'user_id',
+        'plant_name',
+        'plant_desc',
+        'plant_type_id',
+        // Other attributes...
+    ];
     use HasFactory;
 }

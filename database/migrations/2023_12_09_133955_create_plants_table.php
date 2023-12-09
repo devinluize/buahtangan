@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('user_id')->on('tb_user');
             $table->string('plant_name');
-            $table->string('plant_desc');
+            $table->text('plant_desc');
             $table->string('path');
             $table->unsignedBigInteger('plant_type_id');
             $table->foreign('plant_type_id')->references('plant_type_id')->on('types');

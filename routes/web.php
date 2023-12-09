@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\plantController;
 use App\Http\Controllers\Usercontroller;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ Route::get('/', function () {
 Route::get('/schedule', function () {
     return view('schedule');
 });
+Route::post('/add_plant_data',[plantController::class,'add_plant'])->name('add_plant_data');
 
 //Explore
 Route::get('/explore', function () {
