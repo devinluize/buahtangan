@@ -32,9 +32,12 @@ Route::get('/explore', function () {
 });
 
 //My Plants
-Route::get('/my-plants', function(){
-    return view('my-plants');
-});
+// Route::get('/my-plants', function(){
+//     return view('my-plants');
+// });
+Route::get('/my-plants',[plantController::class,'my_plant']);
+
+
 Route::get('/my-plants-add-album', function () {
     return view('add-plant-album');
 });

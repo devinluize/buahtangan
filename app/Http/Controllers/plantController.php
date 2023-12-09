@@ -29,5 +29,9 @@ class plantController extends Controller
             'plant_type_id'=>$selectedPlantSpecies
         ]);
     }
+    public function my_plant(){
+        $pohon = Plant::all();
+        return view('my-plants',compact('pohon'));
+    }
     //
 }
