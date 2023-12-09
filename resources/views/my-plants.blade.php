@@ -1,11 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'My Plants')
-
 @section('sidebar')
-
 @section('content')
-
     <div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col">
         <h1 class="font-bold text-[64px] mx-auto">My Plants</h1>
         {{-- Placeholder untuk koleksi tanaman user --}}
@@ -17,7 +14,7 @@
                         Spinach
                     </h2>
                     <div class="flex flex-col gap-3 p-1 mb-[1.25rem]">
-                        <img src="{{ 'images/bayam.png' }}" alt="tanaman" class="w-[22rem] h-[22rem] mx-auto ">
+                        <img src="{{ 'storage/assets/spinach.png' }}" alt="tanaman" class="w-[22rem] h-[22rem] mx-auto ">
                         <p class="mx-[2rem] text-[24px] font-semibold font-beVietnam">{{ $tree->plant_name }}</p>
                         <div class="flex flex-row mx-[2rem] text-[14px] font-beVietnam">
                             <p>{{ $tree->created_at }}</p>
