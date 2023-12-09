@@ -6,7 +6,7 @@
 
 @section('content')
     {{-- <p>{{ Auth::id() }}</p> --}}
-    {{ dd(Auth::id()) }}
+    {{-- {{ dd(Auth::id()) }} --}}
     @auth
     @endauth
     <div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col">
