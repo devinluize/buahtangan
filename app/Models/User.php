@@ -15,7 +15,8 @@ class User extends Authenticatable
     protected $fillable=['email',
     'username'
     ,'password'];
+    //ini kalau salah berarti ganti user_id
     public function Sub(): HasMany{
-        return $this->hasMany(Sub::class, 'subs_id');
+        return $this->hasMany(Sub::class,'subs_id');
     }
 }
