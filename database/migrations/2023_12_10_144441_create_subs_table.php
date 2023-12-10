@@ -17,6 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('course_id');
             $table->foreign('user_id')->references('user_id')->on('tb_user');
             $table->foreign('course_id')->references('course_id')->on('courses');
+            $table->integer('step');
             $table->timestamps();
         });
     }
