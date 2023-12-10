@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('course_name');
             $table->text('course_detail');
             $table->string('course_dif');
+            $table->string('path');
             $table->string('course_type');
             $table->string('course_place');
             $table->timestamps();

@@ -23,5 +23,20 @@ class SubSeeder extends Seeder
             'course_id'=>1,
             'step'=>3
         ]);
+        Sub::create([
+            'user_id'=>1,
+            'course_id'=>1,
+            'step'=>6
+        ]);
+        Sub::create([
+            'user_id'=>1,
+            'course_id'=>1,
+            'step'=>2
+        ]);
+        Sub::create([
+            'user_id'=>1,
+            'course_id'=>1,
+            'step'=>4
+        ]);
     }
 }

@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\plantController;
 use App\Http\Controllers\Usercontroller;
+use App\Models\Course;
 use App\Models\Step;
+use App\Models\Sub;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +20,12 @@ use Illuminate\Support\Facades\Route;
 
 //Home
 Route::get('/', function () {
-    return view('home');
+    $sub = Sub::all();
+    $course = Course::all();
+    // foreach($sub as $s){
+    //     dump($s->user->username);
+    // }
+    return view('home',compact('sub','course'));
 })->name('home');
 
 //Schedule
