@@ -11,11 +11,11 @@
                 <a href="/my-plants/plant-detail"
                     class="flex flex-col gap-4 w-[26rem] border border-normalGreen shadow-card rounded-[40px] mb-[3rem]">
                     <h2 class="font-semibold text-[32px] text-center bg-normalGreen rounded-tl-[40px] rounded-tr-[40px]">
-                        Spinach
+                        {{ $tree->type->type_name }}
                     </h2>
                     <div class="flex flex-col gap-3 p-1 mb-[1.25rem]">
                         <img src="{{ 'storage/assets/spinach.png' }}" alt="tanaman" class="w-[22rem] h-[22rem] mx-auto ">
-                        <p class="mx-[2rem] text-[24px] font-semibold font-beVietnam">{{ $tree->plant_name }}</p>
+                        <p class="mx-[2rem] text-[24px]  font-semibold font-beVietnam">{{ $tree->plant_name }}</p>
                         <div class="flex flex-row mx-[2rem] text-[14px] font-beVietnam">
                             <p>{{ $tree->created_at }}</p>
                             -

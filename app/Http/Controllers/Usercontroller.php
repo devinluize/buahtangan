@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class Usercontroller extends Controller
 {
@@ -30,7 +31,7 @@ class Usercontroller extends Controller
         $user_data = new User();
         $user_data->username=$request->username;
         $user_data->email=$request->email;
-        $user_data->password=$request->password;
+        $user_data->password=Hash::make($request->password);
         $user_data->save();
         $credentials = $request->only('email', 'password');
         // Auth::attempt($credentials);
