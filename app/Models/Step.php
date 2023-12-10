@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Step extends Model
 {
+    protected $table='plants';
+    protected $primaryKey='id';
+    protected $fillable = [
+
+    ];
     use HasFactory;
 }
