@@ -11,7 +11,7 @@ class Type extends Model
     use HasFactory;
     protected $table = 'types';
     protected $primaryKey = 'plant_type_id';
-    public function Type(): HasMany{
+    public function Plant(): HasMany{
         return $this->hasMany(Plant::class, 'id');
     }
 }
