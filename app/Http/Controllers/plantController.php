@@ -31,6 +31,10 @@ class plantController extends Controller
     }
     public function my_plant(){
         $pohon = Plant::all();
+        // foreach($pohon as $tree){
+        //     dump($tree->type->type_name);
+        // }
+        // dd("s");
         return view('my-plants',compact('pohon'));
     }
     //

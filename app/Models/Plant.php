@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Plant extends Model
 {
     protected $table='plants';
-    protected $primaryKey='user_id';
+    protected $primaryKey='id';
     protected $fillable = [
         'path', // Add 'path' here if it's missing
         'user_id',
@@ -20,6 +20,6 @@ class Plant extends Model
     ];
     use HasFactory;
     public function type(): BelongsTo{
-        return $this->belongsTo(Type::class, 'plant_type_id');
+        return $this->belongsTo(Type::class,'plant_type_id');
     }
 }
