@@ -14,6 +14,7 @@ class StepSeeder extends Seeder
     public function run(): void
     {
         Step::create([
+            'path'=>'assets/plant-detail.png',
             'title'=>'Preparing Soil',
             'step_desc'=>'Lets Prepare Soil for the little Fella!',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",
@@ -22,6 +23,7 @@ class StepSeeder extends Seeder
             Spinach prefers cool, moist conditions, so be sure to maintain consistent soil moisture throughout the growing season. Applying a layer of mulch can help retain moisture and reduce weed competition. With well-prepared soil and proper care, you can enjoy a healthy and productive spinach crop in your garden."
         ]);
         Step::create([
+            'path'=>'assets/plant-detail.png',
             'title'=>'Planting',
             'step_desc'=>'How would you like to plant them?',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",
@@ -30,6 +32,7 @@ class StepSeeder extends Seeder
             Spinach prefers cool, moist conditions, so be sure to maintain consistent soil moisture throughout the growing season. Applying a layer of mulch can help retain moisture and reduce weed competition. With well-prepared soil and proper care, you can enjoy a healthy and productive spinach crop in your garden."
         ]);
         Step::create([
+            'path'=>'assets/full-plant-detail.png',
             'title'=>'Picture the lil fella!',
             'step_desc'=>'Capture this special part of their life!',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",
@@ -38,6 +41,8 @@ class StepSeeder extends Seeder
             Spinach prefers cool, moist conditions, so be sure to maintain consistent soil moisture throughout the growing season. Applying a layer of mulch can help retain moisture and reduce weed competition. With well-prepared soil and proper care, you can enjoy a healthy and productive spinach crop in your garden."
         ]);
         Step::create([
+            'path'=>'assets/full-plant-detail.png',
+
             'title'=>'Watering',
             'step_desc'=>'How much do they drink?',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",
@@ -46,6 +51,7 @@ class StepSeeder extends Seeder
             Spinach prefers cool, moist conditions, so be sure to maintain consistent soil moisture throughout the growing season. Applying a layer of mulch can help retain moisture and reduce weed competition. With well-prepared soil and proper care, you can enjoy a healthy and productive spinach crop in your garden."
         ]);
         Step::create([
+            'path'=>'assets/full-plant-detail.png',
             'title'=>'Fertilizing',
             'step_desc'=>'How much do they eat?',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",
@@ -54,6 +60,7 @@ class StepSeeder extends Seeder
             Spinach prefers cool, moist conditions, so be sure to maintain consistent soil moisture throughout the growing season. Applying a layer of mulch can help retain moisture and reduce weed competition. With well-prepared soil and proper care, you can enjoy a healthy and productive spinach crop in your garden."
         ]);
         Step::create([
+            'path'=>'assets/plant-detail.png',
             'title'=>'Picture the growing fella!',
             'step_desc'=>'To see and remember their growth',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",
@@ -62,6 +69,8 @@ class StepSeeder extends Seeder
             Spinach prefers cool, moist conditions, so be sure to maintain consistent soil moisture throughout the growing season. Applying a layer of mulch can help retain moisture and reduce weed competition. With well-prepared soil and proper care, you can enjoy a healthy and productive spinach crop in your garden."
         ]);
         Step::create([
+            'path'=>'assets/plant-detail.png',
+
             'title'=>'Take care of Spinach',
             'step_desc'=>'Tak care of their special needs!',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",
@@ -70,6 +79,8 @@ class StepSeeder extends Seeder
             Spinach prefers cool, moist conditions, so be sure to maintain consistent soil moisture throughout the growing season. Applying a layer of mulch can help retain moisture and reduce weed competition. With well-prepared soil and proper care, you can enjoy a healthy and productive spinach crop in your garden."
         ]);
         Step::create([
+            'path'=>'assets/full-plant-detail.png',
+
             'title'=>'Planting',
             'step_desc'=>'How would you like to plant them?',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",
@@ -78,6 +89,8 @@ class StepSeeder extends Seeder
             Spinach prefers cool, moist conditions, so be sure to maintain consistent soil moisture throughout the growing season. Applying a layer of mulch can help retain moisture and reduce weed competition. With well-prepared soil and proper care, you can enjoy a healthy and productive spinach crop in your garden."
         ]);
         Step::create([
+            'path'=>'assets/full-plant-detail.png',
+
             'title'=>'Harvesting',
             'step_desc'=>'When to harvest?',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",
@@ -86,6 +99,8 @@ class StepSeeder extends Seeder
             Spinach prefers cool, moist conditions, so be sure to maintain consistent soil moisture throughout the growing season. Applying a layer of mulch can help retain moisture and reduce weed competition. With well-prepared soil and proper care, you can enjoy a healthy and productive spinach crop in your garden."
         ]);
         Step::create([
+            'path'=>'assets/plant-detail.png',
+
             'title'=>'Picture the harvest results!',
             'step_desc'=>'Yum Yum!',
             'step_desc_first'=>"Preparing soil for spinach is crucial to ensure a successful and bountiful harvest. Spinach thrives in well-draining, nutrient-rich soil. Start by selecting a sunny to partially shaded location in your garden. Spinach prefers cooler temperatures, so choose a spot that gets morning sun and afternoon shade, especially in warmer climates.",

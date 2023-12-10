@@ -15,10 +15,12 @@ return new class extends Migration
             $table->id('course_id');
             $table->string('course_name');
             $table->text('course_detail');
+            $table->string('course_dif');
+            $table->string('course_type');
+            $table->string('course_place');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */

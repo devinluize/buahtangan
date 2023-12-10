@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\plantController;
 use App\Http\Controllers\Usercontroller;
+use App\Models\Step;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,7 +57,8 @@ Route::get('/my-course', function(){
 });
 
 Route::get('/course-detail', function(){
-    return view('course-detail');
+    $steps = Step::all();
+    return view('course-detail',['steps' => $steps]);
 });
 
 Route::get('/course-detail/preparing-soil',function(){

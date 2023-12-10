@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('step_desc');
             $table->text('step_desc_first');
             $table->text('step_desc_second');
+            $table->string('path');
             $table->timestamps();
         });
     }
