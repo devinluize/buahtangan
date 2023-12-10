@@ -11,12 +11,23 @@ class Usercontroller extends Controller
 {
     //
     public function login(Request $request){
+        $infolog=[
+            'email' => $request->email,
+            'password' => $request->password
+        ];
+        if(Auth::attempt($infolog)){
+            return redirect()->intended(route('home'));
+        }
+        // else{
+        //     return redirect()->intended('/welcome')->with('error', 'login failed');
+        // }
         // Auth::attempt('username')
         // dd($request);
-        $credentials = $request->only('email','password');
-        // if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-            dd(Auth::id());
+        // $credentials = $request->only('email','password');
+        // // if (Auth::attempt($credentials)) {
+        //     $request->session()->regenerate();
+        //     // dd(Auth::id());
+        //     dd(auth()->user());
         // }
         // dd("dasdsa");
     }
