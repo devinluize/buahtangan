@@ -53,10 +53,13 @@ Route::get('/my-plants',[plantController::class,'my_plant']);
 Route::get('/my-plants-add-album', function () {
     return view('add-plant-album');
 });
-Route::post('/my-plants-add-album-action',[albumControler::class,'add_photo'])->name('add_photo');
+Route::get('/my/{id}', function ($id) {
+    return view('add-photo-album',compact('id'));
+})->name('foto');
+Route::post('/my-plants-add-album-action/{id}',[albumControler::class,'add_photo'])->name('add_photo');
 
-Route::get('/my-photo-add-album', function () {
-    return view('add-photo-album');
+Route::get('/my-photo-add-album/{id}', function ($id) {
+    return view('add-photo-album',compact('id'));
 });
 Route::get('/my-plants/plant-detail/{id}',function ($id) {
     // dd($id);
@@ -64,13 +67,12 @@ Route::get('/my-plants/plant-detail/{id}',function ($id) {
 })->name('pindah');
 
 Route::get('/my-plants/plant-detail/view-album/{id}', function ($id) {
-
     // $album = Album::where('user_id',1)->get();
     $album = Album::where('user_id', 1)
               ->where('plant_id', $id)
               ->get();
-
-    return view('view-album',compact('album'));
+    // dd($album);
+    return view('view-album',compact('album','id'));
 })->name('my-plants/plant-detail/view-album');
 //Courses
 Route::get('/my-course', function(){
