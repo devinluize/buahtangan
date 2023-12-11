@@ -28,6 +28,8 @@ class plantController extends Controller
             'plant_desc'=>$request->plant_desc,
             'plant_type_id'=>$selectedPlantSpecies
         ]);
+        return redirect()->intended('/my-plants');
+
     }
     public function my_plant(){
         $pohon = Plant::all();
