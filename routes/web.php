@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\plantController;
+use App\Http\Controllers\subController;
 use App\Http\Controllers\Usercontroller;
 use App\Models\Course;
 use App\Models\Step;
@@ -33,7 +34,7 @@ Route::get('/schedule', function () {
     return view('schedule');
 });
 Route::post('/add_plant_data',[plantController::class,'add_plant'])->name('add_plant_data');
-
+Route::get('/add_course_sub/{id}',[subController::class,'add_sub'])->name('add_course_sub');
 //Explore
 Route::get('/explore', function () {
     return view('explore');

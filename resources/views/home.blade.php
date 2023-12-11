@@ -86,7 +86,9 @@
                             </div>
                         </div>
                         <p class="font-semibold text-normalGreen text-[24px] text-center mt-[4.75rem]"><a
-                                class="cursor-pointer">Start Now</a></p>
+                                href="{{ route('add_course_sub', ['id' => $crs->course_id]) }}"
+                                class="cursor-pointer">Start
+                                Now</a></p>
                     </div>
                 @endforeach
 
