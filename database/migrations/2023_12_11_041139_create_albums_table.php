@@ -12,7 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('albums', function (Blueprint $table) {
-            $table->id();
+            $table->id('album_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('plant_id');
+            $table->foreign('user_id')->references('user_id')->on('tb_user');
+            $table->foreign('plant_id')->references('id')->on('plants');
+            $table->string('album_name');
+            $table->string('path');
+            $table->string('album_desc');
             $table->timestamps();
         });
     }

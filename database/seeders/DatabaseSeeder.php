@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CourseSeeder::class);
         $this->call(StepSeeder::class);
         $this->call(SubSeeder::class);
+        $this->call(AlbumSeeder::class);
+
 
 
         // \App\Models\User::factory()->create([

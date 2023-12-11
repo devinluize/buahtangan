@@ -8,7 +8,7 @@
         {{-- Placeholder untuk koleksi tanaman user --}}
         <div class="grid grid-cols-3 gap-[3rem] mt-20 ">
             @foreach ($pohon as $tree)
-                <a href="/my-plants/plant-detail"
+                <a href={{ route('pindah', ['id' => $tree->id]) }}
                     class="flex flex-col gap-4 w-[26rem] border border-normalGreen shadow-card rounded-[40px] mb-[3rem]">
                     <h2 class="font-semibold text-[32px] text-center bg-normalGreen rounded-tl-[40px] rounded-tr-[40px]">
                         {{ $tree->type->type_name }}

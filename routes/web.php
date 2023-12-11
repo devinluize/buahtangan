@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\albumControler;
 use App\Http\Controllers\plantController;
 use App\Http\Controllers\subController;
 use App\Http\Controllers\Usercontroller;
+use App\Models\Album;
 use App\Models\Course;
 use App\Models\Step;
 use App\Models\Sub;
@@ -21,7 +23,8 @@ use Illuminate\Support\Facades\Route;
 
 //Home
 Route::get('/', function () {
-    $sub = Sub::all();
+    // $sub = Sub::all();
+    $sub = Sub::where('user_id',1)->get();
     $course = Course::all();
     // foreach($sub as $s){
     //     dump($s->user->username);
@@ -50,15 +53,25 @@ Route::get('/my-plants',[plantController::class,'my_plant']);
 Route::get('/my-plants-add-album', function () {
     return view('add-plant-album');
 });
+Route::post('/my-plants-add-album-action',[albumControler::class,'add_photo'])->name('add_photo');
 
-Route::get('/my-plants/plant-detail',function () {
-    return view('plant-detail');
+Route::get('/my-photo-add-album', function () {
+    return view('add-photo-album');
 });
+Route::get('/my-plants/plant-detail/{id}',function ($id) {
+    // dd($id);
+    return view('plant-detail',compact('id'));
+})->name('pindah');
 
-Route::get('/my-plants/plant-detail/view-album', function () {
-    return view('view-album');
-});
+Route::get('/my-plants/plant-detail/view-album/{id}', function ($id) {
 
+    // $album = Album::where('user_id',1)->get();
+    $album = Album::where('user_id', 1)
+              ->where('plant_id', $id)
+              ->get();
+
+    return view('view-album',compact('album'));
+})->name('my-plants/plant-detail/view-album');
 //Courses
 Route::get('/my-course', function(){
     return view('my-course');

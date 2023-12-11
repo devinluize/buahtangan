@@ -10,25 +10,18 @@
         <h1 class="text-center mx-auto font-bold text-[56px] mb-16">Add Plant Album</h1>
 
         <div class="mx-auto border-[3px] p-12  mb-16">
-            <form class="flex flex-col" method="POST" action="{{ route('add_plant_data') }}" enctype="multipart/form-data">>
+            <form class="flex flex-col" method="POST" action="{{ route('add_photo') }}" enctype="multipart/form-data">>
                 @csrf
-                <label for="albumName" class="m-2 font-semibold text-[24px] mb-[1rem]">Album Name</label>
+                <label for="albumName" class="m-2 font-semibold text-[24px] mb-[1rem]">Photo Name</label>
                 <input type="text" name="plant_name" id="albumName"
                     class="mt-1 p-2 border-b-2 border-gray-300 outline-none w-[36rem] text-[18px] mb-[4rem]" required>
 
-                <label for="albumDesc" class="m-2 font-semibold text-[24px] mb-[4rem]">Album Description</label>
+                <label for="albumDesc" class="m-2 font-semibold text-[24px] mb-[4rem]">Photo Description</label>
                 <textarea name="plant_desc" id="albumDesc" class="border-[2px] p-2  w-[74rem] h-[21rem] resize-none mb-[6rem]"></textarea>
-
-                <label for="plantSpecies" class="m-2 font-semibold mb-4 text-[24px]">Select Option</label>
-                <select id="plantSpecies" name="plantSpecies" class="m-2 text-[18px] border-2 p-2  w-[74rem] h-[7rem]">
-                    <option value="1" class="text-[18px]">Spinach</option>
-                    <option value="2" class="text-[18px]">Roma Tomato</option>
-                    <option value="3" class="text-[18px]">Lady Slipper Orchid</option>
-                </select>
 
                 <div class="flex flex-row mb-16 gap-32">
                     <div class="flex flex-col">
-                        <h1 class="mt-16 mb-[1rem] font-semibold text-[24px]">Cover image</h1>
+                        <h1 class="mt-16 mb-[1rem] font-semibold text-[24px]">Plant image</h1>
                         <div class="border w-[34rem] h-[21rem] p-4 border-dashed border-gray-500 rounded-sm">
                             <input type="file" id="imgInput" class="hidden" name="plant_picture">
                             <label for="imgInput" class="cursor-pointer">
@@ -37,25 +30,10 @@
                         </div>
                     </div>
                     {{-- <input type="file" name="plant_picture"> --}}
-
-                    <div class="flex flex-col">
-                        <h1 class="mt-16 mb-[1rem] font-semibold text-[24px]">Status</h1>
-                        <label
-                            class="bg-lightGreen p-10 w-[32rem] mb-[2rem] font-semibold text-[24px] rounded-3xl text-center cursor-pointer focus-within:bg-normalGreen focus-within:text-white transition-all duration-100">
-                            <input type="radio" name="status" value="ongoing" class="opacity-0">
-                            On-going
-                        </label>
-
-                        <label
-                            class="bg-lightGreen p-10 w-[32rem] font-semibold text-[24px] rounded-3xl text-center cursor-pointer focus-within:bg-normalGreen focus-within:text-white transition-all duration-100">
-                            <input type="radio" name="status" value="done" class="opacity-0">
-                            Done at ...
-                        </label>
-                    </div>
                 </div>
                 <button type="submit"
                     class="text-white text-center mx-auto mb-16 w-[32rem] h-[8rem] bg-normalGreen rounded-3xl font-semibold text-[24px]">Create
-                    Album</button>
+                    Photo</button>
             </form>
         </div>
     </div>
