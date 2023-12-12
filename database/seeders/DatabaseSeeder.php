@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Schedule;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,6 +22,8 @@ class DatabaseSeeder extends Seeder
         $this->call(StepSeeder::class);
         $this->call(SubSeeder::class);
         $this->call(AlbumSeeder::class);
+        $this->call(ScheduleSeeder::class);
+
 
 
 

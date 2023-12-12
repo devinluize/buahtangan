@@ -6,6 +6,7 @@ use App\Http\Controllers\subController;
 use App\Http\Controllers\Usercontroller;
 use App\Models\Album;
 use App\Models\Course;
+use App\Models\Schedule;
 use App\Models\Step;
 use App\Models\Sub;
 use Illuminate\Support\Facades\Route;
@@ -34,7 +35,8 @@ Route::get('/', function () {
 
 //Schedule
 Route::get('/schedule', function () {
-    return view('schedule');
+    $schs=Schedule::where('user_id',1)->get();
+    return view('schedule',compact('schs'));
 });
 Route::post('/add_plant_data',[plantController::class,'add_plant'])->name('add_plant_data');
 Route::get('/add_course_sub/{id}',[subController::class,'add_sub'])->name('add_course_sub');

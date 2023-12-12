@@ -30,7 +30,7 @@
                     <p>{{ $course->index }}/9</p>
                 </div> --}}
                     <div class="mt-4">
-                        <p class="text-2xl text-green-600 font-semibold">{{ $course->course_name }}</p>
+                        <p class="text-2xl text-green-600 font-semibold">tes ini nama</p>
                         <p class="text-green-600 italic">{{ $course->scientific_name }}</p>
                         <div class="flex mt-2">
                             {{-- @foreach ($course->tags as $tag) --}}
