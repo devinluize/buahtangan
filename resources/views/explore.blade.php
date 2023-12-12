@@ -1,4 +1,75 @@
 @extends('layouts.app')
+@section('title', 'My Course')
+@section('sidebar')
+
+@section('content')
+    <div class="container mx-auto mt-20 p-6 bg-white">
+        <div class="flex items-center justify-between mb-4">
+            <h1 class="text-3xl font-semibold">Search Course</h1>
+            <button class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center">
+                <img src="{{ asset('images/filterIcon.png') }}" alt="Filter Icon" class="w-5 h-5">
+            </button>
+        </div>
+
+        <div class="relative flex items-center">
+            <input type="text"
+                class="bg-lightGreen rounded-full px-10 py-3 pl-14 outline-none w-full max-w-xl h-12 shadow-md"
+                placeholder="Learn New Courses and Explore New Possibilities!">
+            <span class="absolute left-4 top-3 text-green-800">
+                <img src="{{ asset('images/searchIcon.png') }}" alt="Search Icon" class="w-4 h-4 mt-2 ml-1">
+            </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+            @foreach ($courses as $course)
+                <div class="relative overflow-hidden bg-green-200 rounded-lg p-4">
+                    <img src="{{ 'storage/' . $course->path }}" alt="Course Image"
+                        class="absolute top-0 left-0 w-full h-full object-cover">
+                    {{-- <div
+                    class="absolute top-0 left-0 bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                    <p>{{ $course->index }}/9</p>
+                </div> --}}
+                    <div class="mt-4">
+                        <p class="text-2xl text-green-600 font-semibold">{{ $course->course_name }}</p>
+                        <p class="text-green-600 italic">{{ $course->scientific_name }}</p>
+                        <div class="flex mt-2">
+                            {{-- @foreach ($course->tags as $tag) --}}
+                            <div class="mr-2">
+                                <div class="bg-green-600 text-white rounded-full py-1 px-4">
+                                    <p class="text-center">{{ $course->course_dif }}</p>
+                                </div>
+                            </div>
+                            <div class="mr-2">
+                                <div class="bg-green-600 text-white rounded-full py-1 px-4">
+                                    <p class="text-center">{{ $course->course_place }}</p>
+                                </div>
+                            </div>
+                            <div class="mr-2">
+                                <div class="bg-green-600 text-white rounded-full py-1 px-4">
+                                    <p class="text-center">{{ $course->course_type }}</p>
+                                </div>
+                            </div>
+                            {{-- @endforeach --}}
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+
+        <div class="flex items-end justify-end pt-5">
+            <button class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-800">
+                <img src="{{ asset('images/Arrow 2.png') }}" alt="Left Arrow" class="w-6 h-6" />
+            </button>
+            <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-2">
+                <span class="text-white font-semibold text-xl">1</span>
+            </div>
+            <button class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-800">
+                <img src="{{ asset('images/Arrow 2.png') }}" alt="Right Arrow" class="w-6 h-6 rotate-180" />
+            </button>
+        </div>
+    </div>
+@endsection
+{{-- @extends('layouts.app')
 
 @section('title', 'My Course')
 
@@ -32,7 +103,6 @@
                     <img src="{{ asset('images/tomato.png') }}" alt="course image" class="absolute z-0 w-[25rem] h-[17rem]">
                     <img src="{{ asset('images/greenLinear.png') }}" alt="course image"
                         class="absolute mx- my- z-9 w-[24.8rem] h-[16.7rem]">
-                    {{-- @for ($i = 0; $i < 10; $i++) --}}
                     <div class="mt-[9rem] ml-4 font-beVietnam">
                         <div class="z-10 relative mb-4">
                             <p class=" text-white text-[24px] font-beVietnam whitespace-pre">Roma Tomato</p>
@@ -69,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- @endfor --}}
+
 
             </div>
             <div class="mt-[3rem] grid grid-cols-3 gap-[5rem] mb-[5rem] items-center px-2">
@@ -311,4 +381,4 @@
     </div>
 
     </p>
-@endsection
+@endsection --}}

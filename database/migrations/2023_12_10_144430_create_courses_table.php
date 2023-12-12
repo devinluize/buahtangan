@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('path');
             $table->string('course_type');
             $table->string('course_place');
+            $table->string('scientific_name');
             $table->timestamps();
         });
     }

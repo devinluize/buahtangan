@@ -40,7 +40,8 @@ Route::post('/add_plant_data',[plantController::class,'add_plant'])->name('add_p
 Route::get('/add_course_sub/{id}',[subController::class,'add_sub'])->name('add_course_sub');
 //Explore
 Route::get('/explore', function () {
-    return view('explore');
+    $courses = Course::all();
+    return view('explore',compact('courses'));
 });
 
 //My Plants
