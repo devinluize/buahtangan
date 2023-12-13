@@ -18,6 +18,14 @@ class UserSeeder extends Seeder
             'username'=>'devin',
             'email'=>'devin.saan@binus.ac.id',
             'password'=>Hash::make('password123'),
+            'phonenumber'=>'081212892521'
+
+        ]);
+        User::create([
+            'username'=>'vije',
+            'email'=>'vije@gmail.com',
+            'password'=>Hash::make('password123'),
+            'phonenumber'=>'081212892521'
         ]);
         //
     }
