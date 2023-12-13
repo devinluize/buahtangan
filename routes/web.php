@@ -9,6 +9,7 @@ use App\Models\Course;
 use App\Models\Schedule;
 use App\Models\Step;
 use App\Models\Sub;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 //Home
 Route::get('/', function () {
     // $sub = Sub::all();
-    $sub = Sub::where('user_id',1)->get();
+    $sub = Sub::where('user_id',Auth::id())->get();
     $course = Course::all();
     // foreach($sub as $s){
     //     dump($s->user->username);
@@ -35,7 +36,7 @@ Route::get('/', function () {
 
 //Schedule
 Route::get('/schedule', function () {
-    $schs=Schedule::where('user_id',1)->get();
+    $schs=Schedule::where('user_id',Auth::id())->get();
     return view('schedule',compact('schs'));
 });
 Route::post('/add_plant_data',[plantController::class,'add_plant'])->name('add_plant_data');
@@ -71,7 +72,7 @@ Route::get('/my-plants/plant-detail/{id}',function ($id) {
 
 Route::get('/my-plants/plant-detail/view-album/{id}', function ($id) {
     // $album = Album::where('user_id',1)->get();
-    $album = Album::where('user_id', 1)
+    $album = Album::where('user_id', Auth::id())
               ->where('plant_id', $id)
               ->get();
     // dd($album);
@@ -79,7 +80,7 @@ Route::get('/my-plants/plant-detail/view-album/{id}', function ($id) {
 })->name('my-plants/plant-detail/view-album');
 //Courses
 Route::get('/my-course', function(){
-    $sub = Sub::where('user_id',1)->get();
+    $sub = Sub::where('user_id',Auth::id())->get();
     return view('my-course',compact('sub'));
 });
 
