@@ -6,7 +6,7 @@
 
 @section('content')
     {{-- <p>{{ Auth::id() }}</p> --}}
-    {{ dd(Auth::id()) }}
+    {{-- {{ dd(Auth::id()) }} --}}
     @auth
     @endauth
     {{-- {{ dd('dasd') }} --}}
