@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id('user_id');
             $table->string('username')->unique();
             $table->string('email');
+            $table->string('phonenumber');
             $table ->string('password')->default(null);
+            $table->string('path')->default('assets/profileDefault.png');
             $table->timestamps();
         });
     }
