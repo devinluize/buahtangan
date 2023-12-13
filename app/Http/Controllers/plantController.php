@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Plant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class plantController extends Controller
 {
@@ -23,7 +24,7 @@ class plantController extends Controller
         $picturePath = $uploadedFile->storeAs('assets', $filename, 'public');
         Plant::create([
             'path'=>$picturePath,
-            'user_id'=>1,
+            'user_id'=>Auth::id(),
             'plant_name'=>$request->plant_name,
             'plant_desc'=>$request->plant_desc,
             'plant_type_id'=>$selectedPlantSpecies
@@ -32,7 +33,7 @@ class plantController extends Controller
 
     }
     public function my_plant(){
-        $pohon = Plant::all();
+        $pohon = Plant::where('user_id',Auth::id())->get();
         // foreach($pohon as $tree){
         //     dump($tree->type->type_name);
         // }
