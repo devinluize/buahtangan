@@ -30,9 +30,13 @@
                     class="bg-lightGreen shadow-md mb-6 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
 
                 <label class="text-[18px] text-blackGreen">Email</label>
+
+                <input type="number" name="phonenumber"
+                    class="bg-lightGreen shadow-md mb-6 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
+                <label class="text-[18px] text-blackGreen">Phone number</label>
+
                 <input type="email" name="email"
                     class="bg-lightGreen shadow-md mb-6 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
-
                 <label class="text-[18px] text-blackGreen">Password</label>
                 <input type="password" name="password"
                     class="bg-lightGreen shadow-md mb-6 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
