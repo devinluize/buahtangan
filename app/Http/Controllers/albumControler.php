@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Album;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class albumControler extends Controller
 {
@@ -12,7 +13,7 @@ class albumControler extends Controller
         $filename = uniqid() . '_' . $uploadedFile->getClientOriginalName();
         $picturePath = $uploadedFile->storeAs('assets', $filename, 'public');
         Album::create([
-            'user_id'=>1,
+            'user_id'=>Auth::id(),
             'plant_id'=>$id,
             'album_name'=>$requesrt->plant_name,
             'album_desc'=>$requesrt->plant_desc,
