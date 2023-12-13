@@ -6,7 +6,7 @@
 
 @section('content')
     {{-- <p>{{ Auth::id() }}</p> --}}
-    {{-- {{ dd(Auth::id()) }} --}}
+    {{ dd(Auth::id()) }}
     @auth
     @endauth
     {{-- {{ dd('dasd') }} --}}
@@ -56,12 +56,14 @@
 
             {{-- @endfor --}}
 
-            <div
-                class="border-[2px] border-dashed rounded-[1.25rem] w-[25rem] h-[17rem] border-normalGreen p-2 flex flex-col">
-                <p class="font-beVietnam text-center mt-[5rem] text-[32px] text-normalGreen">Add new course</p>
-                <button
-                    class="mt-[2rem] w-[3rem] h-[3rem] mx-[10rem] border-[3px] border-normalGreen rounded-full font-bold text-normalGreen text-[24px] ">+</button>
-            </div>
+            <a href="/explore">
+                <div
+                    class="border-[2px] border-dashed rounded-[1.25rem] w-[25rem] h-[17rem] border-normalGreen p-2 flex flex-col">
+                    <p class="font-beVietnam text-center mt-[5rem] text-[32px] text-normalGreen">Add new course</p>
+                    <button
+                        class="mt-[2rem] w-[3rem] h-[3rem] mx-[10rem] border-[3px] border-normalGreen rounded-full font-bold text-normalGreen text-[24px] ">+</button>
+                </div>
+            </a>
         </div>
 
         <div class="mt-[5rem]">

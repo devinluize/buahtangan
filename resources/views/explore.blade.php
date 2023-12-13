@@ -21,39 +21,25 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-            @foreach ($courses as $course)
-                <div class="relative overflow-hidden bg-green-200 rounded-lg p-4">
-                    <img src="{{ 'storage/' . $course->path }}" alt="Course Image"
-                        class="absolute top-0 left-0 w-full h-full object-cover">
-                    {{-- <div
-                    class="absolute top-0 left-0 bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center">
-                    <p>{{ $course->index }}/9</p>
-                </div> --}}
-                    <div class="mt-4">
-                        <p class="text-2xl text-green-600 font-semibold">tes ini nama</p>
-                        <p class="text-green-600 italic">{{ $course->scientific_name }}</p>
-                        <div class="flex mt-2">
-                            {{-- @foreach ($course->tags as $tag) --}}
-                            <div class="mr-2">
-                                <div class="bg-green-600 text-white rounded-full py-1 px-4">
-                                    <p class="text-center">{{ $course->course_dif }}</p>
-                                </div>
-                            </div>
-                            <div class="mr-2">
-                                <div class="bg-green-600 text-white rounded-full py-1 px-4">
-                                    <p class="text-center">{{ $course->course_place }}</p>
-                                </div>
-                            </div>
-                            <div class="mr-2">
-                                <div class="bg-green-600 text-white rounded-full py-1 px-4">
-                                    <p class="text-center">{{ $course->course_type }}</p>
-                                </div>
-                            </div>
-                            {{-- @endforeach --}}
+            @foreach ($course as $crs)
+                <div class="">
+                    <img src="{{ asset('storage/' . $crs->path) }}" alt="course image"
+                        class="absolute z-0 w-[25rem] h-[17rem]">
+                    <img src="{{ asset('images/greenLinear.png') }}" alt="course image"
+                        class="absolute mx- my- z-9 w-[24.8rem] h-[16.7rem]">
+
+                    <div class="mt-[9.5rem] ml-4 font-beVietnam">
+                        <div class="z-10 relative mb-4">
+                            <p class=" text-white text-[24px] font-semibold ">{{ $crs->course_name }}</p>
+                            <p class="text-white">{{ $crs->course_detail }}</p>
                         </div>
                     </div>
+                    <p class="font-semibold text-normalGreen text-[24px] text-center mt-[4.75rem]"><a
+                            href="{{ route('add_course_sub', ['id' => $crs->course_id]) }}" class="cursor-pointer">Start
+                            Now</a></p>
                 </div>
             @endforeach
+
         </div>
 
         <div class="flex items-end justify-end pt-5">

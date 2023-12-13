@@ -42,8 +42,8 @@ Route::post('/add_plant_data',[plantController::class,'add_plant'])->name('add_p
 Route::get('/add_course_sub/{id}',[subController::class,'add_sub'])->name('add_course_sub');
 //Explore
 Route::get('/explore', function () {
-    $courses = Course::all();
-    return view('explore',compact('courses'));
+    $course = Course::all();
+    return view('explore',compact('course'));
 });
 
 //My Plants
@@ -79,7 +79,8 @@ Route::get('/my-plants/plant-detail/view-album/{id}', function ($id) {
 })->name('my-plants/plant-detail/view-album');
 //Courses
 Route::get('/my-course', function(){
-    return view('my-course');
+    $sub = Sub::where('user_id',1)->get();
+    return view('my-course',compact('sub'));
 });
 
 Route::get('/course-detail', function(){
