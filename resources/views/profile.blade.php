@@ -8,7 +8,7 @@
 
     <div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col just">
         <div class="flex flex-row">
-            <img src="{{ asset('images/effel.png') }}" alt="profile picture"
+            <img src="{{ asset('storage/' . Auth::user()->path) }}" alt="profile picture"
                 class="border border-black rounded-full w-[15rem] h-[15rem]">
             <img src="{{ asset('images/camera.png') }}" alt="camera" class="absolute w-12 h-12 ml-[11rem] mt-[12rem]">
             <div class="flex flex-col my-auto ml-20 gap-2">
@@ -40,7 +40,7 @@
 
                 <div>
                     <h3 class="text-gray-500 text-[24px] mb-4">Phone</h3>
-                    <p class="text-[24px]">911</p>
+                    <p class="text-[24px]">{{ Auth::user()->phonenumber }}</p>
                 </div>
             </div>
         </div>

@@ -19,13 +19,32 @@ class Usercontroller extends Controller
             return redirect()->intended(route('home'));
         }
     }
+    public function update_profile(Request $request){
+        $request->validate([
+            'email' => 'required',
+            'username' => 'required|unique:tb_user',
+            'password' => 'required',
+            'password_confirm' => 'required|same:password',
+        ]);
+        $uploadedFile = $request->file('profileImage');
+        $filename = uniqid() . '_' . $uploadedFile->getClientOriginalName();
+        $picturePath = $uploadedFile->storeAs('assets', $filename, 'public');
+        $user = User::find(Auth::id());
+        $user->username=$request->username;
+        $user->phonenumber=$request->phone;
+        $user->email=$request->email;
+        $user->path=$filename;
+        $user->password=$request->password;
+        $user->save();
+        return redirect()->intended('/profile');
+    }
     public function register_action(Request $request){
-        // $data = $request->validate([
-        //     'email' => 'required',
-        //     'username' => 'required|unique:tb_user',
-        //     'password' => 'required',
-        //     'password_confirm' => 'required|same:password',
-        // ]);
+        $data = $request->validate([
+            'email' => 'required',
+            'username' => 'required|unique:tb_user',
+            'password' => 'required',
+            'password_confirm' => 'required|same:password',
+        ]);
         // dd("dasdasdas");
         $user_data = new User();
         $user_data->username=$request->username;
