@@ -25,17 +25,17 @@ class SubSeeder extends Seeder
         ]);
         Sub::create([
             'user_id'=>1,
-            'course_id'=>1,
+            'course_id'=>5,
             'step'=>6
         ]);
         Sub::create([
             'user_id'=>1,
-            'course_id'=>1,
+            'course_id'=>3,
             'step'=>2
         ]);
         Sub::create([
             'user_id'=>1,
-            'course_id'=>1,
+            'course_id'=>4,
             'step'=>4
         ]);
     }

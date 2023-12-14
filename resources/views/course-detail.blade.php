@@ -19,7 +19,7 @@
         {{-- Card --}}
         {{-- {{ $steps }} --}}
         @foreach ($steps as $tr)
-            <a href="/course-detail/preparing-soil"
+            <a href={{ route('detail', ['id' => $tr->id]) }}
                 class="flex flex-row border-gray-400 border-2 w-[80rem] p-8 rounded-3xl mb-5 cursor-pointer">
                 <img src="{{ asset('storage/' . $tr->path) }}" class="w-[9rem] h-[7rem]">
 

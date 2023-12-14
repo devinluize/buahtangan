@@ -6,17 +6,22 @@
 
 @section('content')
     <div class="flex ml-[5rem] mr-[5rem] mt-[6rem] flex-col">
-        <form class="flex flex-col" method="post" action="{{ route('update_profile') }}">
+        <form class="flex flex-col" method="post" action="{{ route('update_profile') }}" enctype="multipart/form-data">
             @csrf
             <div class="flex flex-row justify-between mb-[3.5rem]">
                 <h1 class="font-semibold text-[24px]">Edit Profile</h1>
                 <div class="relative">
-                    <input type="file" id="profileImage" name="profileImage" class="hidden" accept="image/*" />
-                    <label for="profileImage">
+                    <!-- Hidden input field for file upload -->
+                    <input type="file" id="plant_picture" name="plant_picture" class="hidden" />
+
+                    <!-- Label associated with the input field -->
+                    <label for="plant_picture">
+                        <!-- Displaying user profile picture -->
                         <img src="{{ asset('storage/' . Auth::user()->path) }}" alt="profile picture"
                             class="mr-[6rem] border border-black rounded-full w-[10rem] h-[10rem] cursor-pointer">
                     </label>
                 </div>
+
             </div>
 
             <div class="flex flex-row gap-[6rem]">

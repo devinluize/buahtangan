@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     // $sub = Sub::all();
     $sub = Sub::where('user_id',Auth::id())->get();
-    $course = Course::all();
+    $course = Course::take(5)->get();
     // foreach($sub as $s){
     //     dump($s->user->username);
     // }
@@ -84,18 +84,20 @@ Route::get('/my-course', function(){
     return view('my-course',compact('sub'));
 });
 
-Route::get('/course-detail', function(){
+Route::get('/course_detail/{id}', function($id){
     $steps = Step::all();
     return view('course-detail',['steps' => $steps]);
-});
+})->name('course_detail');
 
-Route::get('/course-detail/preparing-soil',function(){
-    return view('preparing-soil');
-});
+Route::get('/course-detail/{id}',function($id){
+    $step = Step::find($id);
+    return view('preparing-soil',compact('step'));
+})->name('detail');
 
 Route::get('/course-detail/picture-plant',function(){
     return view('picture-plant');
 });
+Route::get('/logout',[Usercontroller::class,'logout'])->name('logout');
 //Profile
 Route::get('/profile', function(){
     return view('profile');

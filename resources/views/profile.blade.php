@@ -44,10 +44,11 @@
                 </div>
             </div>
         </div>
-
-        <button
-            class="mt-[12rem] text-[28px] font-medium p-4 bg-normalGreen rounded-[40px] w-[25rem] h-[4.5rem] mx-auto text-center align-middle">Log
-            Out</button>
+        <a href="/logout">
+            <button
+                class="mt-[12rem] text-[28px] font-medium p-4 bg-normalGreen rounded-[40px] w-[25rem] h-[4.5rem] mx-auto text-center align-middle">Log
+                Out</button>
+        </a>
     </div>
 
 @endsection

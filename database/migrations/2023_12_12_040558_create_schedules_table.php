@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('sch_name');
             $table->foreign('user_id')->references('user_id')->on('tb_user');
             $table->string('sch_desc');
-            $table->date('start');
-            $table->date('end');
+            $table->datetime('start');
+            $table->datetime('end');
             $table->timestamps();
         });
     }

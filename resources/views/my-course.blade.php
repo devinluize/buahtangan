@@ -41,7 +41,9 @@
                     </div>
                     <div class="mt-[9rem] ml-4 font-beVietnam">
                         <div class="z-10 relative mb-4">
-                            <p class=" text-white text-[24px] font-beVietnam ">{{ $s->course->course_name }}</p>
+                            <a href="{{ route('course_detail', ['id' => $s->course_id]) }}">
+                                <p class=" text-white text-[24px] font-beVietnam ">{{ $s->course->course_name }}</p>
+                            </a>
                             <p class="text-white italic font-beVietnam ">{{ $s->course->scientific_name }}</p>
                             <div class="relative flex items-center">
                                 <div class="relative flex items-center">
