@@ -12,7 +12,7 @@
                 class="border border-black rounded-full w-[15rem] h-[15rem]">
             <img src="{{ asset('images/camera.png') }}" alt="camera" class="absolute w-12 h-12 ml-[11rem] mt-[12rem]">
             <div class="flex flex-col my-auto ml-20 gap-2">
-                <p class="text-[24px] font-semibold">Effel Zeffanya</p>
+                <p class="text-[24px] font-semibold">{{ Auth::user()->username }}</p>
                 <p class="text-[24px] font-semibold text-gray-400">16 plants harvested</p>
             </div>
             <a href="/edit-profile"

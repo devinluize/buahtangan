@@ -11,8 +11,8 @@
         <div class="bg-white text-center text-black p-4 flex items-center justify-between">
             <div class="flex items-center">
                 <button class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-gray-400">
-                    <span class="text-center text-sm font-semibold text-black font-beVietnam text-2xl">
-                        << /span>
+                    <span class="text-center text-sm font-semibold text-black font-beVietnam">
+                        <
                 </button>
             </div>
 

@@ -105,7 +105,8 @@ Route::get('/profile', function(){
 Route::get('/edit-profile', function () {
     return view('edit-profile');
 });
-Route::post('/update_profile_action',[Usercontroller::class,'update_profile'])->name('update_profile');//About Us
+Route::post('/update_profile_action', [Usercontroller::class, 'update_profile'])->name('update_profile');
+;//About Us
 Route::get('/about-us', function(){
     return view('about-us');
 });

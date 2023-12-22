@@ -51,33 +51,24 @@ class Usercontroller extends Controller
     }
     public function register_action(Request $request){
         $data = $request->validate([
-            'email' => 'required',
+            'email' => 'required|email',
             'username' => 'required|unique:tb_user',
-            'password' => 'required',
-            'password_confirm' => 'required|same:password',
+            'password' => 'required|min:6',
+            'password_confirmation' => 'required|same:password',
+            'phonenumber' => 'required|numeric',
         ]);
-        // dd("dasdasdas");
+        
         $user_data = new User();
-        $user_data->username=$request->username;
-        $user_data->email=$request->email;
-        $user_data->password=Hash::make($request->password);
+        $user_data->username = $data['username'];
+        $user_data->email = $data['email'];
+        $user_data->password = Hash::make($data['password']);
+        $user_data->phonenumber = $data['phonenumber'];
         $user_data->save();
-        $credentials = $request->only('email', 'password');
-        // Auth::attempt($credentials);
-        $request->session()->regenerate();
-        return redirect()->intended('/');
-
-        // Auth::attempt(['username' => $request->username, 'password' => $request->password])
-        // return redirect()->route('home');
-        // ->withSuccess('You have successfully registered & logged in!');
-        // dd($user_data);
-        // if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
-            // $request->session()->regenerate();
-            // return redirect()->back();
-        // }
-// dd($credentials);
-        return view('register');
+        
+        // Redirect to login or home page
+        return redirect()->route('login');
     }
+    
     // public function register_action(){
     //     return view('register');
     // }

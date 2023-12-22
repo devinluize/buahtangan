@@ -16,8 +16,7 @@
         {{-- Authentication Form --}}
         {{-- @auth --}}
 
-        <form method="POST" class="w-[40rem] h-screen p-12 bg-white z-10 absolute right-0"
-            action="{{ route('register.action') }}">
+        <form method="POST" class="w-[40rem] h-screen p-12 bg-white z-10 absolute right-0" action="{{ route('register.action') }}">
             @method('post')
             @csrf
             <img src={{ asset('images/BuahTanganSymbol.png') }} class="w-[60rem] object-fill mb-12">
@@ -29,20 +28,21 @@
                 <input type="text" name="username"
                     class="bg-lightGreen shadow-md mb-6 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
 
-                <label class="text-[18px] text-blackGreen">Email</label>
-
-                <input type="number" name="phonenumber"
+                    
+                    <label class="text-[18px] text-blackGreen">Phone number</label>
+                    <input type="number" name="phonenumber"
                     class="bg-lightGreen shadow-md mb-6 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
-                <label class="text-[18px] text-blackGreen">Phone number</label>
-
-                <input type="email" name="email"
+                    
+                    <label class="text-[18px] text-blackGreen">Email</label>
+                    <input type="email" name="email"
                     class="bg-lightGreen shadow-md mb-6 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
-                <label class="text-[18px] text-blackGreen">Password</label>
-                <input type="password" name="password"
+                
+                    <label class="text-[18px] text-blackGreen">Password</label>
+                    <input type="password" name="password"
                     class="bg-lightGreen shadow-md mb-6 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
 
-                <label class="text-[18px] text-blackGreen">Password Confirmation</label>
-                <input type="password" name="password_confirmation"
+                    <label class="text-[18px] text-blackGreen">Password Confirmation</label>
+                    <input type="password" name="password_confirmation"
                     class="bg-lightGreen shadow-md mb-12 h-[3rem] w-[32rem] rounded-md p-2 text-[18px]" required>
 
             </div>

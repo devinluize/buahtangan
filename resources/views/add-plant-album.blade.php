@@ -10,7 +10,7 @@
         <h1 class="text-center mx-auto font-bold text-[56px] mb-16">Add Plant Album</h1>
 
         <div class="mx-auto border-[3px] p-12  mb-16">
-            <form class="flex flex-col" method="POST" action="{{ route('add_plant_data') }}" enctype="multipart/form-data">>
+            <form class="flex flex-col" method="POST" action="{{ route('add_plant_data') }}" enctype="multipart/form-data">
                 @csrf
                 <label for="albumName" class="m-2 font-semibold text-[24px] mb-[1rem]">Album Name</label>
                 <input type="text" name="plant_name" id="albumName"

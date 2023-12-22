@@ -12,9 +12,10 @@ class User extends Authenticatable
     use HasFactory;
     protected $table = 'tb_user';
     protected $primaryKey  = 'user_id';
-    protected $fillable=['email',
+    protected $fillable=
+    ['email',
     'username'
-    ,'password'];
+    ,'password','phonenumber'];
     //ini kalau salah berarti ganti user_id
     public function Sub(): HasMany{
         return $this->hasMany(Sub::class,'subs_id');
